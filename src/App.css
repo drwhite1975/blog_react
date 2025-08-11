@@ -1,42 +1,28 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+import Header from "./components/Header";
+import PostCard from "./components/PostCard";
+
+import {
+  posts
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+from "./data/posts";
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+export default function App() {
+  return (<> <Header /> <main id="main" className="container" > <section aria-labelledby="latest" > <h2 id="latest" >Ultimi articoli</h2> <div className="grid" > {
+      posts.map(p=> <PostCard key= {
+          p.id
+        }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+        post= {
+          p
+        }
 
-.card {
-  padding: 2em;
-}
+        />)
+    }
 
-.read-the-docs {
-  color: #888;
+    </div> </section> </main> <footer className="site-footer" > <div className="container" > <small>© {
+      new Date().getFullYear()
+    }
+
+    My React Blog</small> </div> </footer> </>);
 }
