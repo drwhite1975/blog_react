@@ -1,20 +1,19 @@
 import Header from "./components/Header";
-import PostCard from "./components/PostCard";
-import { posts } from "./data/posts";
+import { Routes, Route } from "react-router-dom";
+import PostList from "./pages/PostList";
+import PostDetail from "./pages/PostDetail";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
     <>
       <Header />
       <main id="main" className="container">
-        <section aria-labelledby="latest">
-          <h2 id="latest">Ultimi articoli</h2>
-          <div className="grid">
-            {posts.map((p) => (
-              <PostCard key={p.id} post={p} />
-            ))}
-          </div>
-        </section>
+        <Routes>
+          <Route index element={<PostList />} />
+          <Route path="post/:id" element={<PostDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
       <footer className="site-footer">
         <div className="container">

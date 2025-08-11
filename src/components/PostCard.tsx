@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Post } from "../types";
 
 type Props = { post: Post };
@@ -7,7 +8,9 @@ export default function PostCard({ post }: Props) {
     <article className="post" aria-labelledby={`title-${post.id}`}>
       <header>
         <h2 id={`title-${post.id}`}>
-          <a href="#" className="post-link">{post.title}</a>
+          <Link to={`/post/${post.id}`} className="post-link">
+            {post.title}
+          </Link>
         </h2>
         <p className="meta">
           <time dateTime={post.date}>
