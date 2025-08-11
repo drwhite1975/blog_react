@@ -1,1 +1,1 @@
-module.exports = { semi: true, singleQuote: false, trailingComma: "es5" };
+export default { semi: true, singleQuote: false, trailingComma: "es5" };

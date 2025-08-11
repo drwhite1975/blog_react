@@ -7,7 +7,9 @@ export default function PostCard({ post }: Props) {
     <article className="post" aria-labelledby={`title-${post.id}`}>
       <header>
         <h2 id={`title-${post.id}`}>
-          <a href="#" className="post-link">{post.title}</a>
+          <a href="#" className="post-link">
+            {post.title}
+          </a>
         </h2>
         <p className="meta">
           <time dateTime={post.date}>

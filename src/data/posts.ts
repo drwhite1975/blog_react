@@ -7,7 +7,7 @@ export const posts: Post[] = [
     excerpt:
       "Vite, TypeScript e componenti accessibili: base solida per crescere come dev.",
     date: "2025-08-10",
-    tags: ["react", "typescript", "vite"]
+    tags: ["react", "typescript", "vite"],
   },
   {
     id: "stato-props",
@@ -15,6 +15,6 @@ export const posts: Post[] = [
     excerpt:
       "Come passare dati tra componenti e gestire lo stato locale in modo pulito.",
     date: "2025-08-09",
-    tags: ["react", "props", "state"]
-  }
+    tags: ["react", "props", "state"],
+  },
 ];

@@ -10,7 +10,9 @@ export default function App() {
         <section aria-labelledby="latest">
           <h2 id="latest">Ultimi articoli</h2>
           <div className="grid">
-            {posts.map(p => <PostCard key={p.id} post={p} />)}
+            {posts.map((p) => (
+              <PostCard key={p.id} post={p} />
+            ))}
           </div>
         </section>
       </main>
