@@ -1,8 +1,9 @@
-import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
-import PostList from "./pages/PostList";
-import PostDetail from "./pages/PostDetail";
+
+import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
+import PostDetail from "./pages/PostDetail";
+import PostList from "./pages/PostList";
 
 export default function App() {
   return (

@@ -7,7 +7,6 @@ export default function PostList() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [q, setQ] = useState(searchParams.get("q") ?? "");
 
-  // Debounce: aggiorna l’URL 300ms dopo l’ultimo input
   useEffect(() => {
     const id = setTimeout(() => {
       const next = new URLSearchParams(searchParams);
@@ -32,6 +31,13 @@ export default function PostList() {
 
   return (
     <>
+      {/* React 19: questi tag verranno spostati nell'<head> */}
+      <title>My React Blog — Ultimi articoli</title>
+      <meta
+        name="description"
+        content="Articoli su React, TypeScript e sviluppo front-end."
+      />
+
       <form role="search" aria-label="Cerca articoli" className="search">
         <label htmlFor="q" className="sr-only">Cerca</label>
         <input
